@@ -1,0 +1,55 @@
+@font-face {
+  font-family: 'quite-magical-font';
+  src: url('assets/quite-magical-font/QuiteMagicalRegular-8VA2.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;   
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'quite-magical-font', sans-serif;
+  height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: contain; /* Shows the whole image, may add letterboxing */
+  z-index: -1;
+}
+
+.countdown-container {
+  position: absolute;
+  top: calc(45px + 0.5in); /* Move down by about 0.5 inch */
+  left: calc(50% - 0.5in); /* Move closer to center by 0.5 inch */
+  z-index: 1;
+  color: white;
+  text-align: left;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Just+Another+Hand&display=swap');
+
+.countdown-text {
+  font-size: 35px;
+  color: #000000; /* Adjust to match your frame */
+  font-family: 'quite-magical-font', sans-serif;
+  opacity: 0.85;
+  margin-bottom: 10px;
+  text-shadow: none;
+  letter-spacing: 2px;
+}
+
+
+

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Countdown Widget</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <img src="assets/reading-widget.png" alt="Background" class="background" />
+    <div class="countdown-container">
+      <div id="countdown" class="countdown-text"></div>
+    </div>
+  </div>
+
+  <script>
+    // filepath: /Users/veronicaraven/Desktop/Countdown-Project/index.html
+    function updateCountdown() {
+      const now = new Date();
+      const endDate = new Date('2025-12-13T00:00:00');
+      const msInWeek = 1000 * 60 * 60 * 24 * 7;
+      let weeks = Math.ceil((endDate - now) / msInWeek);
+      weeks = weeks < 0 ? 0 : weeks;
+      document.getElementById('countdown').innerHTML = `${weeks} Weeks<br>Left of Fall Semester`;
+    }
+    updateCountdown();
+    setInterval(updateCountdown, 60000); // Update every minute
+  </script>
+</body>
+</html>
